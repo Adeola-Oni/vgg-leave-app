@@ -353,7 +353,7 @@ module.exports = {
               importLoaders: 1,
               sourceMap: shouldUseSourceMap,
               modules: true,
-              getLocalIdent: '[name]__[local]__[hash:base64:5]'
+              getLocalIdent: getCSSModuleLocalIdent,
             }),
           },
           // Opt-in support for SASS. The logic here is somewhat similar

@@ -6,16 +6,17 @@ class Competency extends Component{
     render(){
         return(
             <div>
+                <div style={{position: 'static', zIndex: '-1'}}>
+                    <AdminSideNav />
+                </div>
+
+                <div style={{position: 'relative'}}>
+                    <Navbar />
+                </div>
                 
-                <Navbar />
-                
-                <div class="row">
-                    <div class="col s2  z-depth-3 " style={{'background-color': '#033b52 ', color : 'white', 'padding-top':'5%',
-                    textAlign: 'center', paddingBottom: '2%'}}>
-                        <AdminSideNav />
-                    </div>
-.
-                    <div class="col s10">
+                <div class="row" style={{'margin-left': '10%'}}>
+                    
+                    <div class="col s9 offset-s2">
                         <h4 style={{textAlign :'left', paddingLeft: '5%'}}>ALL COMPETENY CENTERS</h4><br/>
                         <div class="container" style={{width: '85%'}}>
                             <div class="card z-depth-3" style={{paddingLeft: '7%', paddingRight : '7%',

@@ -11,6 +11,8 @@ import EngAdmin from '../src/EngOps/AdminDashboard';
 import Competency from '../src/EngOps/Competency';
 import People from '../src/Staff/People';
 import Engineers from '../src/EngOps/Engineers';
+// import EngPeople from '../src/EngOps/People';
+import PeopleOps from '../src/EngOps/PeopleOps';
 
 import {createBrowserHistory} from 'history';
 
@@ -27,6 +29,9 @@ ReactDOM.render(
             <Route exact path='/competency'  component={Competency}/>
             <Route exact path='/people'  component={People}/>
             <Route exact path='/engineers'  component={Engineers}/>
+            {/* <Route exact path='/engp'  component={EngPeople}/> */}
+            <Route exact path='/eng'  component={PeopleOps}/>
+
         </Switch>
     </Router>
         , document.getElementById('root'));

@@ -8,16 +8,11 @@ class Login extends Component{
                     <div class='col s2'></div>
                     <div class='col s4' style={{padding: '0px', 'margin-top': '5%'}}>
                         <div class="card z-depth-5">
-                            <div class="card-image " style={{height : '495px', backgroundColor: '#013042', 
-                            opacity : '0.8'}}>
-                             {/* <Image /> */}
+                            <div class="card-image " style={{height : '495px', backgroundColor: '#013042'}}>
                              </div>
                          </div>
                      </div>
                             
-                        {/* // backgroundImage: "url('https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&h=350')" ,
-                        //  backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}> */}
-                               
 
                     <div class='col s4 ' style={{padding: '0px', 'margin-top': '5%'}}>
                         <div class="card z-depth-5">

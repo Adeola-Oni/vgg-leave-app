@@ -1,46 +1,72 @@
 import React, {Component} from 'react';
 import Navbar from '../Staff/Navbar';
-import AdminSideNav from './AdminSideNav';
-import classes from './Engineers.css'
+import AdminSideNav from './AdminSideNav'
 
 class Engineers extends Component{
     render(){
         return(
             <div>
-                
-                <Navbar />
-                
-                <div class="row">
-                    <div class="col s2  z-depth-3 " className={classes.nav} >
-                        <AdminSideNav />
-                    </div>
-.
-                    <div class="col s10" >
-                        <h4 className={classes.head}>ALL ENGINEERS</h4><br/>
-                        <div class="container" style={{'margin-top':'1%', width: '100%'}}>
-                        {/* <div style={{textAlign :'left'}}> 
-                            <a class="waves-effect waves-light btn" style={{margin : '1%', backgroundColor: 'blue'}}>GROUP BY SBUS</a>
-                            <a class="waves-effect waves-light btn"  style={{margin : '1%', backgroundColor: 'purple'}}>GROUP BY COMPETENCY PERIOD</a>
-                            <a class="waves-effect waves-light btn" style={{margin : '1%', backgroundColor: 'black'}}>GROUP BY NAMES</a>
-                            <input type='text' placeholder='Search' class='responsive'  />
-                        </div> */}
+                <div style={{position: 'static', zIndex: '-1'}}>
+                    <AdminSideNav />
+                </div>
 
-                            <table class='responsive-table centered striped'>
+                <div style={{position: 'relative'}}>
+                    <Navbar />
+                </div>
+                
+                <div class="row" style={{'margin-left': '10%', marginRight: '3%'}}>
+                    
+                    <div class="col s9 offset-s2">
+                        <h4 style={{textAlign :'left', paddingLeft: '5%'}}>ALL ENGINEERS</h4><br/>
+                        <div class="container" style={{'margin-top':'1%', width: '100%'}}>
+
+                        <div style={{textAlign :'left'}}> 
+                            <a href='#!' class="waves-effect waves-light btn" style={{margin : '1%', backgroundColor: 'blue'}}>GROUP BY SBUS</a>
+                            <a href='#!' class="waves-effect waves-light btn"  style={{margin : '1%', backgroundColor: 'purple'}}>GROUP BY COMPETENCY PERIOD</a>
+                            <a href='#!' class="waves-effect waves-light btn" style={{margin : '1%', backgroundColor: 'black'}}>GROUP BY NAMES</a>
+
+                        </div>
+
+                        <div class='row'>
+                            <div class='col s4'>
+                                <p>ANNUAL LEAVE : <i class="fa fa-lg fa-stop" style={{color: "yellow"}}></i></p>
+                                <p>CASUAL LEAVE : <i class="fa fa-lg fa-stop" style={{color: "blue"}}></i></p>
+                                <p>EMERGENCY LEAVE : <i class="fa fa-lg fa-stop" style={{color: "red"}}></i></p>
+                            </div>
+
+                            <div class='col s4'>
+                                <p>MATERNITY LEAVE : <i class="fa fa-lg fa-stop" style={{color: "green"}}></i></p>
+                                <p>PATERNITY LEAVE : <i class="fa fa-lg fa-stop" style={{color: "orange"}}></i></p>
+                                <p>SICK LEAVE : <i class="fa fa-lg fa-stop" style={{color: "violet"}}></i></p>
+                            </div>
+
+                            <div class='col s4'>
+                                <p>STUDY LEAVE : <i class="fa fa-lg fa-stop" style={{color: "maroon"}}></i></p>
+                                <p>COMPASSIONATE LEAVE : <i class="fa fa-lg fa-stop" style={{color: "teal"}}></i></p>
+                                <p>OUT-OF-OFFICE LEAVE : <i class="fa fa-lg fa-stop" style={{color: "black"}}></i></p>
+                            </div>
+                        </div>
+                            
+                            
+                            
+
+
+                            <table class='responsive-table centered '>
                                 <thead>
                                     <tr>
                                         <th>NAME</th>
                                         {/* <th>MAIL</th> */}
                                         <th>SBU</th>
                                         <th>COMPETENCY</th>
-                                        <th>OUT-OF-OFFICE</th>
-                                        <th>ANNUAL</th>
-                                        <th>CASUAL</th>
-                                        <th>EMERGENCY</th>
-                                        <th>MATERNITY</th>
-                                        <th>PATERNITY</th>
-                                        <th>SICK</th>
-                                        <th>STUDY</th>
-                                        <th>COMPASSIONATE</th>
+                                        <th> <i class="fa fa-lg fa-stop" style={{color: "yellow"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "blue"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "red"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "green"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "orange"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "violet"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "maroon"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "teal"}}></i></th>
+                                        <th><i class="fa fa-lg fa-stop" style={{color: "black"}}></i></th>
                                         
                                     </tr>
                                 </thead>

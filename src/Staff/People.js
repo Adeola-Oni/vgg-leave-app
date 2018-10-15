@@ -6,16 +6,17 @@ class People extends Component{
     render(){
         return(
             <div>
-                
-                <Navbar />
-                
-                <div class="row">
-                    <div class="col s2  z-depth-3 " style={{'background-color': '#033b52 ', color : 'white', 'padding-top':'1%',
-                    textAlign: 'center', paddingBottom: '2%'}}>
-                        <SideNav />
-                    </div>
+                <div style={{position: 'static', zIndex: '-1'}}>
+                    <SideNav />
+                </div>
 
-                    <div class="col s10">
+                <div style={{position: 'relative'}}>
+                    <Navbar />
+                </div>
+                
+                <div class="row" style={{'margin-left': '10%'}}>
+                    
+                    <div class="col s9 offset-s2">
                         <div class="container" style={{'margin-top':'15%', width: '95%'}}>
                             <div class="card z-depth-5" >
                                 <div class="card-content" style={{paddingLeft: '6%', paddingRight :'6%'}}>
