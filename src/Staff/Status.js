@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Image, Row, Col, Grid} from 'react-bootstrap'
 import Navbar from './Navbar';
 import SideNav from './SideNav'
 
@@ -38,7 +37,7 @@ class Status extends Component{
                                                 I am convenient because I require little markup to use effectively.</p>
                                                 </div>
                                                 <div class="card-action red-text" >
-                                                    <a href="#">Reply</a>
+                                                    <a href="#!">Reply</a>
                                                     <a href="/people">People Ops</a>
                                                 </div>
                                                 

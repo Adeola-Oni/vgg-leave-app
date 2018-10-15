@@ -1,10 +1,12 @@
 import React from 'react';
-
+import logo from '../Staff/Images/logo.png'
 const Navbar = (()=>{
     return(
         <nav style={{'background-color': '#013042', color : 'white'}}>
             <div class="nav-wrapper" style={{ 'margin-left' : '2%', 'margin-right':'2%'}}>
-                <a class="brand-logo">VGG Logo</a>
+                <a class="brand-logo" href='#!'>
+                    <img class="responsive-img small responsive" src={logo} alt='MARY JANE' style={{width : '30%'}}/>
+                </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="sass.html" >Home</a></li>
                     <li><a href="sass.html" >Enquiries</a></li>
@@ -14,5 +16,4 @@ const Navbar = (()=>{
         </nav>
     )
 })
-
 export default Navbar;

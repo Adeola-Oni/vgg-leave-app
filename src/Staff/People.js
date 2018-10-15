@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Image, Row, Col, Grid} from 'react-bootstrap'
 import Navbar from './Navbar';
 import SideNav from './SideNav'
 

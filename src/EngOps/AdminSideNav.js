@@ -11,7 +11,7 @@ const AdminSideNav = (()=>{
                 <li><a href="/competency" style={{color: 'white'}}>COMPETENCY CENTER</a></li><br />
                 <li><a href="#!" style={{color: 'white'}}>SBUs GRAPH</a></li><br />
                 <li><a href="#!" style={{color: 'white'}}>CC GRAPH</a></li><br />
-                <li><a href="#!" style={{color: 'white'}}>ENGINEERS</a></li><br />
+                <li><a href="/engineers" style={{color: 'white'}}>ENGINEERS</a></li><br />
                 <li><a href="/people" style={{color: 'white'}}>PEOPLE OPS</a></li><br /><br />
             </ul>
         </div>

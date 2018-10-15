@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Router, Route, Switch} from 'react-router'
 import StaffDashboard from '../src/Staff/Dashboard';
@@ -11,8 +10,9 @@ import Records from '../src/Staff/Records';
 import EngAdmin from '../src/EngOps/AdminDashboard';
 import Competency from '../src/EngOps/Competency';
 import People from '../src/Staff/People';
+import Engineers from '../src/EngOps/Engineers';
 
-import {createBrowserHistory} from 'history'
+import {createBrowserHistory} from 'history';
 
 let history = createBrowserHistory();
 
@@ -26,7 +26,7 @@ ReactDOM.render(
             <Route exact path='/admin'  component={EngAdmin}/>
             <Route exact path='/competency'  component={Competency}/>
             <Route exact path='/people'  component={People}/>
-            
+            <Route exact path='/engineers'  component={Engineers}/>
         </Switch>
     </Router>
         , document.getElementById('root'));
