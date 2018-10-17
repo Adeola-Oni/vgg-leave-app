@@ -3,15 +3,11 @@ import './CSS/Nav.css'
 
 const Nav = (()=>{
     return(
-        <div>
-            <nav  className='nav'>
+        <div class='navbar-fixed navbar'>
+            <nav  className='nav '>
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo">FALogo</a>
-                    {/* <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
+                    <a href="#!" class="brand-logo">FAAN LOGO</a>
                     
-                    </ul> */}
                 </div>
             </nav>
         </div>

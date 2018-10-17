@@ -47,7 +47,7 @@ class Login extends Component{
                                     </div>
                                     {this.state.button ? 
                                         <button class="btn waves-effect waves-light" type="submit" name="action"
-                                        onClick={(e)=>this.handleLogin(e)}>LOGIN
+                                        onClick={(e)=>this.handleLogin(e)} style={{padding: '5px'}}>LOGIN
                                                 <i class="material-icons right">send</i>
                                         </button> : 
                                             <Spinner/>

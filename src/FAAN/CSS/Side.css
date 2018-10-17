@@ -1,11 +1,11 @@
 .side{
-    margin-top: 0.3%;
+    margin-top: 5%;
     padding-top: 1%;
     background-color : #FFFAFB; 
     color : black; 
     text-align: center;
     position: absolute;
-    width: 20%
+    width: 20%;
 }
 .side a{
     color : black;
