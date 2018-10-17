@@ -29,7 +29,7 @@ class People extends Component{
                                         </div>
                                     </div>
                                         <button class="btn waves-effect waves-light" type="submit" name="action" 
-                                style={{'margin-left': '5%', 'margin-right': '5%', 'background-color': '#013042'}}>SEND
+                                style={{'margin-left': '5%', 'margin-right': '5%', padding: '5px','background-color': '#013042'}}>SEND
                                     <i class="material-icons right">send</i>
                                 </button>
                                 <br/><br/>

@@ -6,7 +6,7 @@ class Dashboard extends Component{
     render(){
         return(
             <div>
-                <div style={{position: 'static', zIndex: '-1'}}>
+                <div >
                     <SideNav />
                 </div>
 
@@ -109,7 +109,7 @@ class Dashboard extends Component{
                                     </div> */}
 
                                     <button class="btn waves-effect waves-light" type="submit" name="action" 
-                                    style={{'background-color': '#013042'}}>Submit
+                                    style={{'background-color': '#013042', padding: '5px'}}>Submit
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </div>

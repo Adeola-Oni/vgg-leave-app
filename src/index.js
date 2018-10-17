@@ -11,8 +11,14 @@ import EngAdmin from '../src/EngOps/AdminDashboard';
 import Competency from '../src/EngOps/Competency';
 import People from '../src/Staff/People';
 import Engineers from '../src/EngOps/Engineers';
-// import EngPeople from '../src/EngOps/People';
 import PeopleOps from '../src/EngOps/PeopleOps';
+
+// <------- FAAN WORK ----- >
+
+import FAANLogin from '../src/FAAN/FAAN.js';
+import Page from '../src/FAAN/Dashboard';
+import Transactions from '../src/FAAN/Transactions';
+import Banks from '../src/FAAN/Banks'
 
 import {createBrowserHistory} from 'history';
 
@@ -31,6 +37,11 @@ ReactDOM.render(
             <Route exact path='/engineers'  component={Engineers}/>
             {/* <Route exact path='/engp'  component={EngPeople}/> */}
             <Route exact path='/eng'  component={PeopleOps}/>
+            {/* <-----FAAN WORK -----> */}
+            <Route exact path='/faan'  component={FAANLogin}/>
+            <Route exact path='/page'  component={Page}/>
+            <Route exact path='/transactions'  component={Transactions}/>
+            <Route exact path='/banks'  component={Banks}/>
 
         </Switch>
     </Router>

@@ -1,0 +1,24 @@
+.dashboard{
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    margin-top: 4%;
+    margin-right: 3%;
+    
+}
+
+.name{
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+
+.list{
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.graph{
+    width: 70%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
