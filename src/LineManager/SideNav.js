@@ -41,9 +41,9 @@ class SideNav extends Component {
                 <li><div class="divider"></div></li>
                 <li><a href="/staffdashboard" >REQUEST LEAVE</a></li>
                 <li><div class="divider"></div></li>
-                <li><a href="/status" >LEAVE STATUS</a></li>
+                <li><a href="!#" >REQUESTS</a></li>
                 <li><div class="divider"></div></li>
-                <li><a href="/records" >LEAVE RECORDS</a></li>
+                <li><a href="!#" >STAFFS</a></li>
                 <li><div class="divider"></div></li>
                 <li><a href="/people" >PEOPLE OPS</a></li>
             </ul>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import logo from '../Staff/Images/logo.png';
-import './CSS/Navbar.css'
+import logo from './Images/logo.png';
+import './CSS/Nav.css'
 
 class Navbar extends Component{
     logOutHandler(){

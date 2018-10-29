@@ -12,6 +12,7 @@ import Competency from '../src/EngOps/Competency';
 import People from '../src/Staff/People';
 import Engineers from '../src/EngOps/Engineers';
 import PeopleOps from '../src/EngOps/PeopleOps';
+import LineManager from '../src/LineManager/DashboardLine'
 
 // <------- FAAN WORK ----- >
 
@@ -28,6 +29,7 @@ ReactDOM.render(
     <Router history={history}>
         <Switch>
             <Route exact path='/login' component={Login}/>
+            <Route exact path='/' component={Login}/>
             <Route exact path='/staffdashboard' component={StaffDashboard}/>
             <Route exact path='/status' component={Status}/>
             <Route exact path='/records'  component={Records}/>
@@ -35,6 +37,8 @@ ReactDOM.render(
             <Route exact path='/competency'  component={Competency}/>
             <Route exact path='/people'  component={People}/>
             <Route exact path='/engineers'  component={Engineers}/>
+            <Route exact path='/linemanager'  component={LineManager}/>
+            
             {/* <Route exact path='/engp'  component={EngPeople}/> */}
             <Route exact path='/eng'  component={PeopleOps}/>
             {/* <-----FAAN WORK -----> */}

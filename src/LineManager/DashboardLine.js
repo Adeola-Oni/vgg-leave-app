@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Navbar from './Navbar';
+import Nav from './Nav';
 import SideNav from './SideNav';
 import axios from 'axios';
 
-class Dashboard extends Component{
+class DashboardLine extends Component{
     
 
     
@@ -149,7 +149,7 @@ class Dashboard extends Component{
                 </div>
 
                 <div style={{position: 'relative'}}>
-                    <Navbar />
+                    <Nav />
                 </div>
                 
                 <div class="row" style={{'margin-left': '10%'}}>
@@ -264,4 +264,4 @@ class Dashboard extends Component{
     }
 }
 
-export default Dashboard;
+export default DashboardLine;

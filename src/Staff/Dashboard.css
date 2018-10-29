@@ -2,3 +2,12 @@
     color: white;
     background-color: black;
 }
+
+html{
+    color: black;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: black;
+}

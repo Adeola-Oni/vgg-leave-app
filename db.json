@@ -1,0 +1,38 @@
+{
+  "staffs": [
+    {
+      "id": 1,
+      "email": "adeola.oni@venturegardengroup.com",
+      "name": "ADEOLA ONI",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "password": "Adeola",
+      "lineManager": "no",
+      "managerMail": "moses.adebayo@venturegardengroup.com"
+    },
+    {
+      "id": 2,
+      "email": "moses.adebayo@venturegardengroup.com",
+      "name": "MOSES ADEBAYO",
+      "SBU": "AVITECH",
+      "competency": "UI/UX",
+      "password": "Moscoworld123",
+      "lineManager": "yes",
+      "managerMail": "moses.adebayo@venturegardengroup.com"
+    }
+  ],
+  "requests": [
+    {
+      "id": 11,
+      " file": "this.state.file",
+      "reason": "this.state.reason",
+      "leaveName": "this.state.leaveName"
+    },
+    {
+      "id": "1",
+      "file": "AdeolaCV.pdf",
+      "reason": "bhjghuk",
+      "leaveName": "sick"
+    }
+  ]
+}
