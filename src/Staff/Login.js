@@ -139,14 +139,14 @@ class Login extends Component{
                         },
                         line_linked: {
                             enable: true,
-                            distance: 150,
+                            distance: 15,
                             color: '#86f080',
                             opacity: 0.4,
                             width: 1.3
                         },
                         move: {
                             enable: true,
-                            speed: 15,
+                            speed: 5,
                             random: false,
                             straight: false,
                             bounce: false,
