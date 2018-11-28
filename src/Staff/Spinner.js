@@ -3,7 +3,7 @@ import React from 'react';
 const Spinner = (()=>{
     return(
         <div class="preloader-wrapper small active">
-            <div class="spinner-layer spinner-blue">
+            <div class="spinner-layer spinner-purple">
                 <div class="circle-clipper left">
                 <div class="circle"></div>
                 </div><div class="gap-patch">

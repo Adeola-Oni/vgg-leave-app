@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import logo from './Images/logo.png';
-import './CSS/Nav.css'
+import logo from '../Images/logo.png';
+import './Nav.css'
 
-class Navbar extends Component{
+class Nav extends Component{
+  
     logOutHandler(){
         localStorage.clear();
     }
+    
     
     render(){    
     return(
@@ -16,8 +18,6 @@ class Navbar extends Component{
                         <img class="responsive-img small responsive" src={logo} style={{width: '20%'}} alt='MARY JANE' />
                     </a>
                     <ul class="right ">
-                        
-                        <li><a href="/policies" >Leave Policies</a></li>
                         <li ><a href="/login" onClick={()=>this.logOutHandler()}>LogOut<i class="material-icons right icon"  >exit_to_app</i></a></li>
                     </ul>
                 </div>
@@ -27,4 +27,4 @@ class Navbar extends Component{
     }
 };
 
-export default Navbar;
+export default Nav;

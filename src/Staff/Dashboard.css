@@ -2,12 +2,103 @@
     color: white;
     background-color: black;
 }
+.bof{
+    width: 90%
+}
 
 html{
     color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
 }
 
 body{
     font-family: 'Lato', sans-serif;
     color: black;
 }
+
+.wrapper{
+    padding-left: 5%;
+    width: 100%;
+}
+.roe{
+    margin-right: 0px;
+}
+
+@media only screen and (max-width : 1200px){
+    .wrapper{
+        padding-left: 12%;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width : 1024px){
+    .wrapper{
+        padding-left: 15%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 994px){
+    .row .col.offset-s3 {
+        margin-left: 0%;
+    }
+    .row .col.s10 {
+        width: 100%;
+    }
+
+    .row .col.s9 {
+        width: 90%;
+    }
+    .wrapper{
+        padding-left: 5%;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .sidenav{
+        display: none;
+    }
+}
+@media only screen and (max-width : 518px){
+    html{
+        font-size: 13px;
+    }
+    
+    .row.col.s4{
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width : 473px){
+    html{
+        font-size: 12px;
+    }
+    
+}
+
+@media only screen and (max-width : 443px){
+    
+    html{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 419px){
+    
+    html{
+        font-size: 13px;
+    }
+    .row .col{
+        float: none;
+    }
+
+    .row .col.s4{
+        float: none; 
+        margin-left: unset;
+        width: auto;
+    }
+}
+

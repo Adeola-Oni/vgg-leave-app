@@ -31,14 +31,14 @@ class SideNav extends Component {
         
     return(
         <div>
-            <ul id="slide-out" class="sidenav sidenav-fixed lis z-depth-3" >
-                <li><img class="circle responsive-img" src={ian} alt='MARY JANE' style={{width: '60%'}}/></li>
-                <li className='color'><b><h5>
+            <ul id="slide-out" className="sidenav sidenav-fixed lis z-depth-2" 
+             style={{paddingTop: '3%', zIndex:0}} >
+                <li className='color name'><b><h5>
                     {this.state.name}
                     </h5></b></li>
                 <li className='color'><b>{this.state.SBU}</b></li>
                 <li className='color'><b>{this.state.competency}</b></li>
-                <li><div class="divider"></div></li>
+                <li><div className="divider"></div></li>
                 <li><a href="/staffdashboard" >REQUEST LEAVE</a></li>
                 <li><div class="divider"></div></li>
                 <li><a href="/status" >LEAVE STATUS</a></li>

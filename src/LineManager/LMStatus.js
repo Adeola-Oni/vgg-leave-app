@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import Navbar from './Navbar';
+import Nav from './Nav';
 import SideNav from './SideNav';
 import axios from 'axios';
-import './CSS/Status.css';
 
 class Status extends Component{
     state={
@@ -63,18 +62,19 @@ class Status extends Component{
     render(){
         return(
             <div>
-                <div style={{position: 'static', zIndex: '-1'}}>
+                <div >
                     <SideNav />
                 </div>
+
                 <div style={{position: 'relative'}}>
-                    <Navbar />
+                    <Nav />
                 </div>
-                <div class="row space">
-                <div class="col s9 offset-s3 ">
-                <div >
+                <div class="row">
+                <div class="col s9 offset-s2">
+                <div class="container" style={{'margin-top':'2%', width: '90%'}}>
                     <br />
-                    <div class='row content' >
-                        <div  class="col s12 name"><p><b>LEAVE STATUS</b></p></div>
+                    <div class='row'  style={{'margin-left': '10%'}}>
+                        <div  class="col s12"><p><b>LEAVE STATUS</b></p></div>
                             <div class="col s10" style={{paddingLeft: '5%', paddingRight: '3%'}}>
 
                             {this.state.content.map((x, i) => {
@@ -87,6 +87,7 @@ class Status extends Component{
                                 }else{
                                     color = 'black';
                                 }
+
                                 return(
                                     <div class="card z-depth-3" key={i}>
                                          <div class="card-content black-text">

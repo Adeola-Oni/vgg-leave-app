@@ -12,14 +12,22 @@ import Competency from '../src/EngOps/Competency';
 import People from '../src/Staff/People';
 import Engineers from '../src/EngOps/Engineers';
 import PeopleOps from '../src/EngOps/PeopleOps';
-import LineManager from '../src/LineManager/DashboardLine'
+import LineManager from '../src/LineManager/DashboardLine';
+import Requests from '../src/LineManager/Requests';
+import LMStatus from '../src/LineManager/LMStatus';
+import LMRecords from '../src/LineManager/LMRecords';
+import Staffs from '../src/LineManager/Staffs';
+import Peopleops from '../src/LineManager/PeopleOps';
+import NotFound from '../src/Staff/errorPage';
+import Policies from '../src/Staff/Policies'
 
 // <------- FAAN WORK ----- >
 
 import FAANLogin from '../src/FAAN/FAAN.js';
 import Page from '../src/FAAN/Dashboard';
 import Transactions from '../src/FAAN/Transactions';
-import Banks from '../src/FAAN/Banks'
+import Banks from '../src/FAAN/Banks';
+import SBU from '../src/EngOps/SBU'
 
 import {createBrowserHistory} from 'history';
 
@@ -38,7 +46,15 @@ ReactDOM.render(
             <Route exact path='/people'  component={People}/>
             <Route exact path='/engineers'  component={Engineers}/>
             <Route exact path='/linemanager'  component={LineManager}/>
-            
+            <Route exact path='/requests'  component={Requests}/>
+            <Route exact path='/lmstatus'  component={LMStatus}/>
+            <Route exact path='/lmrecords'  component={LMRecords}/>
+            <Route exact path='/staffs'  component={Staffs}/>
+            <Route exact path='/peopleops'  component={Peopleops}/>
+            <Route exact path='/policies'  component={Policies}/>
+            <Route exact path='/sbugraph'  component={SBU}/>
+            <Route component={NotFound}/>
+
             {/* <Route exact path='/engp'  component={EngPeople}/> */}
             <Route exact path='/eng'  component={PeopleOps}/>
             {/* <-----FAAN WORK -----> */}

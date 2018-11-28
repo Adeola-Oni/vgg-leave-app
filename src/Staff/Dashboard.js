@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import Navbar from './Navbar';
 import SideNav from './SideNav';
 import axios from 'axios';
+import Spinner from '../Staff/Spinner';
+import './Dashboard.css'
+import 'react-notifications/lib/notifications.css';
+
 
 class Dashboard extends Component{
-    
-
-    
     state={
-        id: null,
+        userid: null,
         checkedValue : null,
         reason :'',
         leaveName: '',
@@ -23,92 +24,138 @@ class Dashboard extends Component{
             compassionate: false,
             out : false,
         },
-        file: null,
-        fileName: null
+        startDate: null,
+        endDate: null,
+        submitButton : true,
+        lineManagerMail : null,
+        linemangerName : null,
+        currentDate: null,
+        maxDate: null,
+        incompleteFields: false
     }
 
     componentDidMount(){
-        let id =  localStorage.getItem('id');
-        this.setState({
-            id
-        })
+        let userid =  localStorage.getItem('userid');
+        let lineManagerMail = localStorage.getItem('lineManagerMail');
+        let day = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        let year = new Date().getFullYear();
+        let currentDate =  `${year}-${month}-${day}`;
+        let maxDate = `${year}-12-31`;
 
+        this.setState({
+            userid,
+            lineManagerMail,
+            currentDate,
+            maxDate
+        })
     }
 
     annualLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {annual : checked} });
-        this.setState({ leaveName : 'annual' });
+        this.setState({ leaveName : 'Annual Leave' });
     })
 
     casualLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {casual : checked} });
-        this.setState({ leaveName : 'casual' });
+        this.setState({ leaveName : 'Casual Leave' });
     })
 
     emergencyLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {emergency : checked}})
-        this.setState({ leaveName : 'emergency' });
+        this.setState({ leaveName : 'Emergency Leave' });
     })
 
     maternityLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {maternity: checked}})
-        this.setState({ leaveName : 'maternity' });
+        this.setState({ leaveName : 'Maternity Leave' });
     })
 
     paternityLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {paternity: checked}});
-        this.setState({ leaveName : 'paternity' });
+        this.setState({ leaveName : 'Paternity Leave' });
     })
 
     sickLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {sick: checked}})
-        this.setState({ leaveName : 'sick' });
+        this.setState({ leaveName : 'Sick Leave' });
     })
 
     studyLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {study: checked}})
-        this.setState({ leaveName : 'study' });
+        this.setState({ leaveName : 'Study Leave' });
     })
 
     compassionateLeave=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {compassionate: checked}})
-        this.setState({ leaveName : 'compassionate' });
+        this.setState({ leaveName : 'Compassionate Leave' });
     })
     
     outOfOffice=((e)=>{
         let checked = e.target.checked;
         this.setState({ checkboxes : {out: checked}})
-        this.setState({ leaveName : 'out' });
+        this.setState({ leaveName : 'Out-Of-Office' });
     })
-
     
     submitHandler=((e)=>{
-        if(this.state.reason !== '' && (Object.values(this.state.checkboxes)[0] === true)){
-            if(Object.keys(this.state.checkboxes)[0]=== 'sick' || Object.keys(this.state.checkboxes)[0]=== 'study'){
-                if(this.state.file === null){
-                    alert('please attach a file to the page for Sick/Study leave')
+        e.preventDefault();
+        if(this.state.reason !== '' && (Object.values(this.state.checkboxes)[0] === true && 
+            this.state.startDate !== null && this.state.endDate !== null)){
+            this.setState({incompleteFields : false});
+            if(this.state.leaveName === 'Out-Of-Office' || this.state.leaveName === 'Emergency Leave' 
+                || this.state.leaveName === 'Sick Leave'){
+                let data = {
+                    userId: this.state.userid,
+                    startDate: this.state.startDate,
+                    endDate: this.state.endDate,
+                    status: 'Approved',
+                    reason: this.state.reason,
+                    leaveName : this.state.leaveName,
+                    lineManagerMail : this.state.lineManagerMail,
+                    lineMangerName: localStorage.getItem('lineManagerName'),
+                    SBU: localStorage.getItem('SBU'),
+                    competency: localStorage.getItem('competency'),
+                    name: localStorage.getItem('name'),
+                    staffType: localStorage.getItem('staffType')
                 }
-                else{
-                    let data = {
-                        id: this.state.id,
-                        file: this.state.fileName,
-                        reason: this.state.reason,
-                        leaveName : this.state.leaveName
-                    }
-                     axios.post('http://localhost:3000/requests', data).then(res=>console.log(res)).catch(err=>console.log(err));
+                axios.post('http://localhost:3000/requests', data).then(
+                res=>{
+                    window.location.replace('http://'+window.location.host+"/status")
                 }
+                ).catch(err=>alert(err))
+            }else{
+                let data = {
+                    userId: this.state.userid,
+                    startDate: this.state.startDate,
+                    endDate: this.state.endDate,
+                    status: 'pending',
+                    reason: this.state.reason,
+                    leaveName : this.state.leaveName,
+                    lineManagerMail : this.state.lineManagerMail,
+                    lineMangerName: localStorage.getItem('lineManagerName'),
+                    SBU: localStorage.getItem('SBU'),
+                    competency: localStorage.getItem('competency'),
+                    name: localStorage.getItem('name'),
+                    staffType: localStorage.getItem('staffType')
+                }
+                axios.post('http://localhost:3000/requests', data).then(
+                res=>{
+                    window.location.replace('http://'+window.location.host+"/status")
+                }
+            ).catch(err=>alert(err))
             }
-        }else{
-            alert('please fill all boxes')
             
+            
+        }else{
+            this.setState({incompleteFields : true})
         }
     })
 
@@ -117,148 +164,131 @@ class Dashboard extends Component{
         this.setState({reason})
     })
 
-    fileHandler=((e)=>{
-        let file = e.target.files[0];
-        let name = e.target.files[0].name;
-        if(file !== undefined){
-            let type = file.type;
-            if( type === 'application/pdf' || type === 'image/jpeg' ||  type === 'image/jpg' || 
-            type=== "application/x-zip-compressed"){
-                let res;
-                if(file.size < 1000000){
-                    let reader = new FileReader();
-                    reader.onload= ((e)=>{
-                        res = e.target.result;
-                        this.setState({file : res});
-                        this.setState({fileName: name});
-                    })
-
-                    reader.readAsDataURL(e.target.files[0])
-                }
-            }
-        }
+    startDateHandler=((e)=>{
+        let startDate = e.target.value;
+        this.setState({startDate});
     })
 
-
+    endDateHandler=((e)=>{
+        let endDate = e.target.value;
+        this.setState({endDate})
+    })
     
     render(){
         return(
             <div>
                 <div >
-                    <SideNav />
+                    <SideNav  />
                 </div>
 
                 <div style={{position: 'relative'}}>
                     <Navbar />
                 </div>
                 
-                <div class="row" style={{'margin-left': '10%'}}>
-                    
-                    <div class="col s9 offset-s2">
-                    
-                        <div class="container" style={{'margin-top':'2%', width: '95%'}}>
-                                <br />
+                <div className="row wrapper" >
+                    <div className=" col s9 offset-s3 boxy">
+                        <div className=" container " style={{width: '85%'}}>
+                            <br />
+                            <form onSubmit={(e)=>this.submitHandler(e)} >
+                                <div class='row'>
+                                    <div  class="col s12"><p><b>REQUEST A LEAVE</b></p></div>
+                                    <div style={{textAlign: 'center'}}>
+                                        {this.state.incompleteFields&&<p style={{color: 'red'}}>
+                                        Please fill all fields correctly</p>}
+                                    </div>
+                                    <div class="col s4" >
+                                    
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Annual Leave' checked={this.state.checkboxes.annual} onChange={(e)=>this.annualLeave(e)}/>
+                                                <span>Annual</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Casual Leave' checked={this.state.checkboxes.casual} onChange={(e)=>this.casualLeave(e)}/>
+                                                <span>Casual</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Emergency Leave' checked={this.state.checkboxes.emergency} onChange={(e)=>this.emergencyLeave(e)}/>
+                                                <span>Emergency</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s4">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Maternity Leave' checked={this.state.checkboxes.maternity} onChange={(e)=>this.maternityLeave(e)}/>
+                                                <span>Maternity</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Paternity Leave' checked={this.state.checkboxes.paternity} onChange={(e)=>this.paternityLeave(e)}/>
+                                                <span>Paternity</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Sick Leave' checked={this.state.checkboxes.sick} onChange={(e)=>this.sickLeave(e)}/>
+                                                <span>Sick</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                    <div class="col s4">
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Study Leave' checked={this.state.checkboxes.study} onChange={(e)=>this.studyLeave(e)}/>
+                                                <span>Study</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='Compassionate Leave' checked={this.state.checkboxes.compassionate} onChange={(e)=>this.compassionateLeave(e)}/>
+                                                <span>Compassionate</span>
+                                            </label>
+                                        </p>
+                                        <p>
+                                            <label>
+                                                <input type="checkbox" id='OutOfOffice' checked={this.state.checkboxes.out} onChange={(e)=>this.outOfOffice(e)}/>
+                                                <span>Out-Of-Office</span>
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
                                 
-                                <form action="#" >
-                                    <div class='row'>
-                                        <div  class="col s12"><p><b>REQUEST A LEAVE</b></p></div>
-                                        <div class="col s4" >
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='annual' checked={this.state.checkboxes.annual} onChange={(e)=>this.annualLeave(e)}/>
-                                                    <span>Annual</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='casual' checked={this.state.checkboxes.casual} onChange={(e)=>this.casualLeave(e)}/>
-                                                    <span>Casual</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='emergency' checked={this.state.checkboxes.emergency} onChange={(e)=>this.emergencyLeave(e)}/>
-                                                    <span>Emergency</span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col s4">
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='maternity' checked={this.state.checkboxes.maternity} onChange={(e)=>this.maternityLeave(e)}/>
-                                                    <span>Maternity</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='paternity' checked={this.state.checkboxes.paternity} onChange={(e)=>this.paternityLeave(e)}/>
-                                                    <span>Paternity</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='sick' checked={this.state.checkboxes.sick} onChange={(e)=>this.sickLeave(e)}/>
-                                                    <span>Sick</span>
-                                                </label>
-                                            </p>
-                                        </div>
-                                        <div class="col s4">
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='study' checked={this.state.checkboxes.study} onChange={(e)=>this.studyLeave(e)}/>
-                                                    <span>Study</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='compassionate' checked={this.state.checkboxes.compassionate} onChange={(e)=>this.compassionateLeave(e)}/>
-                                                    <span>Compassionate</span>
-                                                </label>
-                                            </p>
-                                            <p>
-                                                <label>
-                                                    <input type="checkbox" id='outOfOffice' checked={this.state.checkboxes.out} onChange={(e)=>this.outOfOffice(e)}/>
-                                                    <span>Out-Of-Office</span>
-                                                </label>
-                                            </p>
-                                        </div>
+                                <div class="input-field row">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="icon_prefix2" class="materialize-textarea" onChange={(e)=>this.reasonsHandler(e)}></textarea>
+                                    <label for="icon_prefix2">Reason(s) for request <span style={{color :'red'}}>*</span></label>
+                                </div>
+                                <br />
+                                <div>
+                                    <div class='col s4'>START DATE(MM/DD/YYY) <span style={{color :'red'}}>*</span>
+                                        <input type="date" min={this.state.currentDate} max={this.state.maxDate}
+                                        onChange={(e)=>this.startDateHandler(e)}/>
                                     </div>
-                                </form>
-
-                                <div >
-                                    <div class="input-field "  >
-                                        <i class="material-icons prefix">mode_edit</i>
-                                        <textarea id="icon_prefix2" class="materialize-textarea" onChange={(e)=>this.reasonsHandler(e)}></textarea>
-                                        <label for="icon_prefix2">Reason(s) for request <span style={{color :'red'}}>*</span></label>
+                                    <div class='col s4'></div>
+                                    <div class='col s4'>END DATE(MM/DD/YYY) <span style={{color :'red'}}>*</span>
+                                        <input type="date" min={this.state.currentDate} 
+                                        max={this.state.maxDate}
+                                        onChange={(e)=>this.endDateHandler(e)} />
                                     </div>
-                                    <br />
+                                </div>
+                                <br />
 
-                                    <form>
-                                        <div class="file-field input-field">
-                                            <p>Please attach recommended files (Sick/Study)</p>
-                                            <i class="material-icons left"> 
-                                            <input type="file" src onChange={(e)=>this.fileHandler(e)} multiple/>
-                                            attachment</i>
-                            
-                                            <div class="file-path-wrapper">
-                                                <input class="file-path validate" type="text" placeholder="Upload one or more files" />
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <br />
-
-
-                                    <button class="btn waves-effect waves-light" 
-                                    onClick={(e)=>this.submitHandler(e)} type="submit" name="action" 
+                                {this.state.submitButton ? 
+                                    <button class="btn waves-effect waves-light" type="submit"
                                     style={{'background-color': '#013042', padding: '5px'}}>Submit
                                         <i class="material-icons right">send</i>
-                                    </button>
-
-                                </div>
-                                </div>
-                            </div>
+                                    </button> : <div><Spinner/></div>
+                                }
+                            </form>
                         </div>
-            
+                    </div>
+                </div>
             </div>
         )
     }

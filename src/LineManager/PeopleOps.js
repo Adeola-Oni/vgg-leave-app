@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import Navbar from './Navbar';
-import SideNav from './SideNav';
-import './CSS/People.css'
+import Nav from './Nav';
+import SideNav from './SideNav'
 
-class People extends Component{
+class PeopleOps extends Component{
     render(){
         return(
             <div>
@@ -12,13 +11,13 @@ class People extends Component{
                 </div>
 
                 <div style={{position: 'relative'}}>
-                    <Navbar />
+                    <Nav />
                 </div>
                 
                 <div class="row" style={{'margin-left': '10%'}}>
                     
                     <div class="col s9 offset-s2">
-                        <div class=" box" >
+                        <div class="container" style={{'margin-top':'15%', width: '95%'}}>
                             <div class="card z-depth-5" >
                                 <div class="card-content" style={{paddingLeft: '6%', paddingRight :'6%'}}>
                                     <span class="card-title activator grey-text text-darken-4"><b>
@@ -45,4 +44,4 @@ class People extends Component{
     }
 }
 
-export default People;
+export default PeopleOps;

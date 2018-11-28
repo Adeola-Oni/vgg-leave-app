@@ -13,7 +13,7 @@ const AdminSideNav = (()=>{
                     <li><div class="divider"></div></li>
                     <li><a href="/competency" style={{color: 'black'}}>COMPETENCY CENTER</a></li>
                     <li><div class="divider"></div></li>
-                    <li><a href="#!" style={{color: 'black'}}>SBUs GRAPH</a></li>
+                    <li><a href="/sbugraph" style={{color: 'black'}}>SBUs DATA</a></li>
                     <li><div class="divider"></div></li>
                     <li><a href="#!" style={{color: 'black'}}>CC GRAPH</a></li>
                     <li><div class="divider"></div></li>

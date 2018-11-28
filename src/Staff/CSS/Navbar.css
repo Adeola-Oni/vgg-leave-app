@@ -13,6 +13,46 @@
 .all{
     background-color: #013042;
     padding-left: 3%;
-    padding-right: 3%
+    padding-right: 3%;
+    border-bottom: 3px solid #51B74B;
+    overflow: hidden;
 }
 
+.vgglogo{
+    width: 30vw;
+}
+
+.nav-content{
+    display: none;
+    overflow: hidden;
+}
+.menu{
+    display: none
+}
+
+@media only screen and (max-width : 994px){
+    .nav-content{
+        display: block;
+    }
+}
+
+@media only screen and (max-width : 518px){
+    .nav-content{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .modal{
+        width: 70%;
+    }
+    .vgglogo{
+        width: 50vw; 
+    }
+}
+
+@media only screen and (max-width : 497px){
+    .vgglogo{
+        width: 60vw;
+    }
+}

@@ -31,21 +31,26 @@ class SideNav extends Component {
         
     return(
         <div>
-            <ul id="slide-out" class="sidenav sidenav-fixed lis z-depth-3" >
-                <li><img class="circle responsive-img" src={ian} alt='MARY JANE' style={{width: '60%'}}/></li>
+            <ul id="slide-out" class="sidenav sidenav-fixed lis z-depth-2" style={{paddingTop: '3%'}}>
+                {/* <li><img class="circle responsive-img" src={ian} alt='MARY JANE' style={{width: '60%'}}/></li> */}
                 <li className='color'><b><h5>
                     {this.state.name}
                     </h5></b></li>
                 <li className='color'><b>{this.state.SBU}</b></li>
                 <li className='color'><b>{this.state.competency}</b></li>
+                <br/><br/>
                 <li><div class="divider"></div></li>
-                <li><a href="/staffdashboard" >REQUEST LEAVE</a></li>
+                <li><a href="/linemanager" >REQUEST LEAVE</a></li>
                 <li><div class="divider"></div></li>
-                <li><a href="!#" >REQUESTS</a></li>
+                <li><a href="/lmstatus" >LEAVE STATUS</a></li>
                 <li><div class="divider"></div></li>
-                <li><a href="!#" >STAFFS</a></li>
+                <li><a href="/lmrecords" >LEAVE RECORDS</a></li>
                 <li><div class="divider"></div></li>
-                <li><a href="/people" >PEOPLE OPS</a></li>
+                <li><a href="/requests" >REQUESTS</a></li>
+                <li><div class="divider"></div></li>
+                <li><a href="/staffs" >STAFFS</a></li>
+                <li><div class="divider"></div></li>
+                <li><a href="/peopleops" >PEOPLE OPS</a></li>
             </ul>
         </div>
     )

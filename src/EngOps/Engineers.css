@@ -10,3 +10,31 @@
     text-align:left;
     padding-left: 5%;
 }
+
+.button{
+    width: 80%;
+    
+}
+.buttons{
+    /* background-image: linear-gradient(to top right , #51B74B,#013042) ; */
+    background-color: #51B74B;
+}
+
+.buttons:hover{
+    background-color: #51B74B;
+}
+
+.btn-groupping{
+    margin: 2%;
+    background-color: transparent;
+    padding: 1%;
+    color: #000000;
+    border: 3px solid #51B74B;
+    margin-bottom: 4%;
+}
+
+.spin{
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    float: left;
+}

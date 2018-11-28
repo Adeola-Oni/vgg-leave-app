@@ -1,0 +1,143 @@
+
+.content{
+    margin-left: 10%
+}
+.space{
+    padding-left: 5%;
+    width: 100%;
+}
+body{
+    overflow: visible;
+}
+
+
+@media only screen and (max-width : 1200px){
+    
+}
+
+@media only screen and (max-width : 994px){
+    .sidenav{
+        display: none;
+    }
+   .name{
+       margin-top: 5%;
+   }
+   .container{
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 448px){
+    .row .col.offset-s2 {
+        margin-left: 0%;
+    }
+}
+@media only screen and (max-width : 419px){
+    .row .col.offset-s2 {
+        margin-left: 0%;
+    }
+    .container{
+        margin-left: -15%;
+    }
+    .name{
+        text-align: center;
+    }
+    .row .col.s9{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 409px){
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width : 371px){
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width : 371px){
+    i.left {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width : 1200px){
+    .space{
+        padding-left: 12%;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width : 1024px){
+    .space{
+        padding-left: 15%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 994px){
+    .row .col.offset-s3 {
+        margin-left: 0%;
+    }
+    .row .col.s9 {
+        width: 90%;
+    }
+    .space{
+        padding-left: 10%;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .sidenav{
+        display: none;
+    }
+}
+@media only screen and (max-width : 518px){
+    
+    html{
+        font-size: 13px;
+    }
+    
+    .row.col.s4{
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media only screen and (max-width : 473px){
+    
+    html{
+        font-size: 12px;
+    }
+    
+}
+
+@media only screen and (max-width : 443px){
+    
+    html{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 419px){
+    
+    html{
+        font-size: 13px;
+    }
+    .row .col{
+        float: none;
+    }
+
+    .row .col.s4{
+        float: none; 
+        margin-left: unset;
+        width: auto;
+    }
+}
+

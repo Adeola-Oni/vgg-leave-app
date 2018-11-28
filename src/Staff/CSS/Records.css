@@ -1,0 +1,24 @@
+.full{
+    margin-left: 10%;
+}
+@media only screen and (max-width : 994px){
+    .name{
+        margin-top: 5%;
+    }
+    .full{
+        margin-left: 0px;
+    }
+
+    .sidenav{
+        display: none;
+    }
+}
+@media only screen and (max-width :448px) {
+    .container{
+        margin-left: 0px;
+        width: 100%;
+    }
+    .row .col.offset-s2 {
+        margin-left: 7%;
+    }
+}

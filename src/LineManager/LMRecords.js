@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import Navbar from './Navbar';
+import Nav from './Nav';
 import SideNav from './SideNav';
 import axios from 'axios';
-import './CSS/Records.css';
 
-
-class Records extends Component{
+class LMRecords extends Component{
     state={
         annual: 0,
         casual: 0,
@@ -79,21 +77,21 @@ class Records extends Component{
         
         return(
             <div>
-                <div style={{position: 'static', zIndex: '-1'}}>
+                <div >
                     <SideNav />
                 </div>
 
                 <div style={{position: 'relative'}}>
-                    <Navbar />
+                    <Nav />
                 </div>
                 
-                <div className="row full" >
+                <div class="row" style={{'margin-left': '10%'}}>
                     
                     <div class="col s9 offset-s2">
                     
                         <div class="container" style={{'margin-top':'2%', width: '95%'}}>
                             <br/>
-                            <h6 className='name'><b>LEAVE RECORD FOR {this.state.year}</b></h6>
+                            <h6><b>LEAVE RECORD FOR {this.state.year}</b></h6>
                             <br/>
 
                             <table className='highlight centered'>
@@ -164,4 +162,4 @@ class Records extends Component{
     }
 }
 
-export default Records;
+export default LMRecords;

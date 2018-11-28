@@ -1,10 +1,10 @@
-.lis{
+/* .lis{
     margin-top: 4.7%;
-    padding-top: 1%;
+    padding-top: 7%;
     background-color: #FFFAFB;
     color : white;
     text-align: center;
-}
+} */
 
 .image{
     width: 60%
@@ -12,3 +12,12 @@
 .color{
     color: black;
 }
+
+.name{
+    padding-top: 7%;
+}
+
+@media only screen and (max-width : 1200px){
+    
+}
+

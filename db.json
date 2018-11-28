@@ -7,8 +7,10 @@
       "SBU": "FINATECH",
       "competency": "UI/UX",
       "password": "Adeola",
-      "lineManager": "no",
-      "managerMail": "moses.adebayo@venturegardengroup.com"
+      "lineManager": false,
+      "managerMail": "moses.adebayo@venturegardengroup.com",
+      "lineManagerName": "MOSES ADEBAYO",
+      "staffType": "Engineer"
     },
     {
       "id": 2,
@@ -17,22 +19,267 @@
       "SBU": "AVITECH",
       "competency": "UI/UX",
       "password": "Moscoworld123",
-      "lineManager": "yes",
-      "managerMail": "moses.adebayo@venturegardengroup.com"
+      "lineManager": true,
+      "managerMail": "samuel.awonorin@venturegardengroup.com",
+      "lineManagerName": "SAMUEL AWONORIN",
+      "staffType": "Engineer"
+    },
+    {
+      "id": 3,
+      "email": "isa.ibrahim@venturegardengroup.com",
+      "name": "ISA IBRAHIM",
+      "SBU": "GSV",
+      "competency": "UI/UX",
+      "password": "isa",
+      "lineManager": true,
+      "managerMail": "samuel.awonorin@venturegardengroup.com",
+      "lineManagerName": "SAMUEL AWONORIN",
+      "staffType": "Engineer"
+    },
+    {
+      "id": 4,
+      "email": "samuel.awonorin@venturegardengroup.com",
+      "name": "SAMUEL AWONORIN",
+      "SBU": "VIGIPAY",
+      "competency": "BACKEND",
+      "password": "sam",
+      "lineManager": true,
+      "managerMail": "none",
+      "lineManagerName": "none",
+      "staffType": "Engineer"
+    },
+    {
+      "id": 5,
+      "email": "admin@venturegardengroup.com",
+      "password": "Admin",
+      "lineManager": "admin"
     }
   ],
   "requests": [
     {
-      "id": 11,
-      " file": "this.state.file",
-      "reason": "this.state.reason",
-      "leaveName": "this.state.leaveName"
+      "userId": "1",
+      "startDate": "2018-11-17",
+      "endDate": "2018-11-22",
+      "status": "Approved",
+      "reason": "i need a few days to rest",
+      "leaveName": "Annual Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 1
     },
     {
-      "id": "1",
-      "file": "AdeolaCV.pdf",
-      "reason": "bhjghuk",
-      "leaveName": "sick"
+      "userId": "1",
+      "startDate": "2018-11-24",
+      "endDate": "2018-11-29",
+      "status": "Approved",
+      "reason": "hbkjhl",
+      "leaveName": "Out-Of-Office",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-17",
+      "endDate": "2018-11-23",
+      "status": "Approved",
+      "reason": "yugju",
+      "leaveName": "Emergency Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 4
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-17",
+      "endDate": "2018-11-19",
+      "status": "Approved",
+      "reason": "loln uug gjuhj ugjh",
+      "leaveName": "Sick Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 5
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-23",
+      "endDate": "2018-11-23",
+      "status": "Approved",
+      "reason": "hkjh",
+      "leaveName": "Out-Of-Office",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 6
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-24",
+      "endDate": "2018-11-24",
+      "status": "Approved",
+      "reason": "nlkjk;",
+      "leaveName": "Sick Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 7
+    },
+    {
+      "userId": "2",
+      "startDate": "2018-11-24",
+      "endDate": "2018-11-23",
+      "status": "Approved",
+      "reason": "lol",
+      "leaveName": "Sick Leave",
+      "lineManagerMail": "samuel.awonorin@venturegardengroup.com",
+      "lineMangerName": "SAMUEL AWONORIN",
+      "SBU": "AVITECH",
+      "competency": "UI/UX",
+      "name": "MOSES ADEBAYO",
+      "staffType": "Engineer",
+      "id": 8
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-24",
+      "endDate": "2018-11-26",
+      "status": "Disapproved",
+      "reason": "lol",
+      "leaveName": "Paternity Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 9
+    },
+    {
+      "userId": "1",
+      "startDate": "2018-11-29",
+      "endDate": "2018-11-29",
+      "status": "pending",
+      "reason": "hello i need",
+      "leaveName": "Annual Leave",
+      "lineManagerMail": "moses.adebayo@venturegardengroup.com",
+      "lineMangerName": "MOSES ADEBAYO",
+      "SBU": "FINATECH",
+      "competency": "UI/UX",
+      "name": "ADEOLA ONI",
+      "staffType": "Engineer",
+      "id": 10
+    }
+  ],
+  "engineers": [
+    {
+      "id": 1,
+      "number": 0
+    }
+  ],
+  "frontend": [
+    {
+      "id": 1,
+      "number": 9
+    }
+  ],
+  "hni": [
+    {
+      "id": 1,
+      "number": 1
+    }
+  ],
+  "support": [
+    {
+      "id": 1,
+      "number": 2
+    }
+  ],
+  "backend": [
+    {
+      "id": 1,
+      "number": 2
+    }
+  ],
+  "devops": [
+    {
+      "id": 1,
+      "number": 4
+    }
+  ],
+  "qa": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "avitech": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "edutech": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "powertech": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "gsv": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "gardendata": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "vigipay": [
+    {
+      "id": 1,
+      "number": 3
+    }
+  ],
+  "finatech": [
+    {
+      "id": 1,
+      "number": 1
+    }
+  ],
+  "cooporate": [
+    {
+      "id": 1,
+      "number": 3
     }
   ]
 }
