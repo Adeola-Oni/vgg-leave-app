@@ -91,7 +91,7 @@ class Records extends Component{
                     
                     <div class="col s9 offset-s2">
                     
-                        <div class="container" style={{'margin-top':'2%', width: '95%'}}>
+                        <div class="container" style={{ width: '95%'}}>
                             <br/>
                             <h6 className='name'><b>LEAVE RECORD FOR {this.state.year}</b></h6>
                             <br/>

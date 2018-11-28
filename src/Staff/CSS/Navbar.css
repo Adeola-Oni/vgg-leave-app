@@ -33,10 +33,24 @@
 @media only screen and (max-width : 994px){
     .nav-content{
         display: block;
+        overflow: hidden;
     }
 }
 
-@media only screen and (max-width : 518px){
+@media only screen and (max-width : 534px){
+    .nav-content{
+        display: block;
+        font-size: 12px;
+    }
+    .tabs{
+        font-size: 12px;
+    }
+    .tab{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 540px){
     .nav-content{
         display: none;
     }

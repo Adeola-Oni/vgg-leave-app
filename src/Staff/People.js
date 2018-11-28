@@ -17,7 +17,7 @@ class People extends Component{
                 
                 <div class="row" style={{'margin-left': '10%'}}>
                     
-                    <div class="col s9 offset-s2">
+                    <div class="col s9 offset-s3">
                         <div class=" box" >
                             <div class="card z-depth-5" >
                                 <div class="card-content" style={{paddingLeft: '6%', paddingRight :'6%'}}>

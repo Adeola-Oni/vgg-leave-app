@@ -25,7 +25,8 @@
 @media only screen and (max-width : 448px){
     .box{
         margin-top:45%;
-        width: 90%;
+        margin-left: 0%;
+        width: 100%;
     }
 }
 

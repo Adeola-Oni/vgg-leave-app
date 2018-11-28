@@ -67,11 +67,11 @@ class Navbar extends Component{
 
                 </div>
                 <div className="nav-content">
-                    <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="/staffdashboard">Request Leave</a></li>
-                        <li class="tab"><a href="/status">Leave Status</a></li>
-                        <li class="tab"><a href="/records">Leave Records</a></li>
-                        <li class="tab"><a href="/people">People Ops</a></li>
+                    <ul className="tabs tabs-transparent">
+                        <li className="tab"><a href="/staffdashboard">Request Leave</a></li>
+                        <li className="tab"><a href="/status">Leave Status</a></li>
+                        <li className="tab"><a href="/records">Leave Records</a></li>
+                        <li className="tab"><a href="/people">People Ops</a></li>
                     </ul>
                 </div>
 
