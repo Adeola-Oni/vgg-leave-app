@@ -131,7 +131,7 @@ class Login extends Component{
                 <Particles params={{
             		particles: {
                         number: {
-                            value: 20,
+                            value: 15,
                             density: {
                               enable: true,
                               value_area: 500
@@ -139,14 +139,14 @@ class Login extends Component{
                         },
                         line_linked: {
                             enable: true,
-                            distance: 15,
+                            distance: 150,
                             color: '#86f080',
                             opacity: 0.4,
                             width: 1.3
                         },
                         move: {
                             enable: true,
-                            speed: 5,
+                            speed: 15,
                             random: false,
                             straight: false,
                             bounce: false,
