@@ -1,12 +1,11 @@
 import React, {Component} from 'react'
-import VGGLogo from './Images/logo.png';
+import VGGLogo from './Images/favicon.png';
 import Spinner from'./Spinner';
 import axios from 'axios';
 import './CSS/Login.css';
 import Particles from 'react-particles-js';
 import ReactDOM from 'react-dom';
 import Modal from 'react-responsive-modal';
-import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
 class Login extends Component{
@@ -131,7 +130,7 @@ class Login extends Component{
                 <Particles params={{
             		particles: {
                         number: {
-                            value: 15,
+                            value: 20,
                             density: {
                               enable: true,
                               value_area: 500
@@ -139,14 +138,14 @@ class Login extends Component{
                         },
                         line_linked: {
                             enable: true,
-                            distance: 150,
+                            distance: 250,
                             color: '#86f080',
                             opacity: 0.4,
                             width: 1.3
                         },
                         move: {
                             enable: true,
-                            speed: 15,
+                            speed: 4,
                             random: false,
                             straight: false,
                             bounce: false,
@@ -156,7 +155,22 @@ class Login extends Component{
                               rotateY: 1200
                             }
                         }
-            	}}}style={{position: "absolute", "z-index": -1}}/>
+                },
+                interactivity: {
+                    events: {
+                      onhover: {
+                        enable: true,
+                        mode: "repulse"
+                      },
+                    },
+                    modes: {
+                      repulse: {
+                        distance: 100,
+                        duration: 0.4
+                      },
+                    }
+                  }
+                  }}style={{position: "absolute", "z-index": -1}}/>
                  
                 <div className="bod" style={{padding: '0px', "z-index": 5, textAlign: 'center'}}>
 
@@ -164,29 +178,29 @@ class Login extends Component{
                     </div>
                     <div className='form' >
                         <form className="card z-depth-5 innerForm" onSubmit={(e)=>this.handleLogin(e)}>
-                            <div className="card-content white-text">
+                            <div className="card-content black-text">
                                 <div>
-                                    <img className=" responsive-img logo" src={VGGLogo} alt='VGG LOGO' />
+                                    <img className="responsive-img logo" src={VGGLogo} alt='VGG LOGO' />
                                 </div>
                                 {this.state.validationError}
                                 <br/>
                                 <div class="input-field col s12">
-                                    <i className="material-icons prefix" style={{color: 'white'}}>email</i>
-                                    {/* style={{color: 'white'} */}
-                                    <input id="email" type="email" class="validate white-text" onChange={(e)=>this.emailHandler(e)}/>
-                                    <label for="email" className='white-text'>Email</label>
+                                    <i className="material-icons prefix" style={{color: '#00202c'}}>email</i>
+                                    {/* style={{color: '#00202c'} */}
+                                    <input id="email" type="email" class="validate black-text" onChange={(e)=>this.emailHandler(e)}/>
+                                    <label for="email" className='black-text'>Email</label>
                                 </div>
                         
                                 <div className="input-field col s12" style={{marginBottom : '12%'}}>
-                                    <i class="material-icons prefix" style={{color: 'white'}}>vpn_key</i>
-                                    <input id="password" type="password" class="validate white-text" onChange={(e)=>this.passwordHandler(e)}/>
-                                    <label for="password" className='white-text'>Password</label>
+                                    <i class="material-icons prefix" style={{color: '#00202c'}}>vpn_key</i>
+                                    <input id="password" type="password" class="validate black-text" onChange={(e)=>this.passwordHandler(e)}/>
+                                    <label for="password" className='black-text'>Password</label>
                                 </div> 
 
                                 <br />
                                 {this.state.button ? 
                                     <button  className="button btn waves-effect waves-light" type="submit" name="action" 
-                                    style={{backgroundColor: 'transparent'}}>
+                                    style={{backgroundColor: '#013042'}}>
                                         <p style={{color: 'white'}}>LOGIN</p>
                                         {/* <i class="material-icons right">send</i> */}
                                     </button>

@@ -30,15 +30,14 @@
     height: 100vh;
 }
 .innerForm{
-    background-color: transparent;
+    background-color: white;
     /* background-image: linear-gradient(to bottom left, rgb(24, 80,21),#013042, #00202c); */
     /* #00202c   #001016  #000d11 #51B74B*/
-    border: 1px solid white;
     border-radius: 4%;
 }
 
 .logo{
-    width: 75%;
+    width: 10%;
     margin-top: 4%;
     margin-bottom: 10%;
 }
@@ -46,10 +45,9 @@
 .button{
      margin-bottom:25%; 
      width: 25%;
-     color: transparent;
+     /* color: white; */
      padding-left: 3%;
      padding-right: 3%;
-     border: 1px solid white;
 }
 .button:hover{
     padding-left: 4%;
