@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import VGGLogo from './Images/favicon.png';
+import VGGLogo from './Images/WhiteLogo.png';
 import Spinner from'./Spinner';
 import axios from 'axios';
 import './CSS/Login.css';
@@ -52,7 +52,7 @@ class Login extends Component{
             let emailDot =email.includes('.');
             let password = this.state.password
             if(emailAt === true && emailDot === true && password !== null){
-                axios.get('http://localhost:3000/staffs').then((res)=>{
+                axios.get('https://api.myjson.com/bins/alnui/staffs').then((res)=>{
                 let response = res.data;
                 for(let x of response){
                     if(x.email.toLowerCase() === this.state.email && x.password ===this.state.password){
@@ -81,12 +81,12 @@ class Login extends Component{
                         this.setState({button : false});
 
                         if(x.lineManager === false ){
-                            window.location.replace('http://'+window.location.host+"/staffdashboard")
+                           window.location.href = '/staffdashboard';
                                 
                         }else if(x.lineManager === "admin"){
-                            window.location.replace('http://'+window.location.host+"/admin")
+                           window.location.href ="/admin"
                         }else{
-                            window.location.replace('http://'+window.location.host+"/linemanager")
+                           window.location.href ="/linemanager"
                         }
                     }
                 }
